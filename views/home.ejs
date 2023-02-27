@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <title>Home NCAM</title>
+</head>
+
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <h1 style="text-align:center">
+      <%=selecionado%>
+    </h1>
+  </div>
+  <div id="sel-subject" class="container">
+    <form id="form-home" class="container_form_capture" action="/home/requerimentos" method="POST">
+      <% if (selecionado=="Machine" ) { %>
+        <div class="container">
+          <div class="labels">
+            <label for="">Máquina</label>
+          </div>
+          <div class="select_container">
+            <select name="selectMaquina" class="form-select" id="machine_select" aria-label="Default select example">
+              <option value=""></option>
+              <option value="Eumaq">Eumaq</option>
+              <option value="Wotan">Wotan</option>
+              <option value="Veker Siemens">Veker Siemens</option>
+              <option value="Veker Heindenhain">Veker Heindenhain</option>
+              <option value="Veker Mitsubish">Veker Mitsubish</option>
+              <option value="SW523 Mitsubish">SW523 Mitsubish</option>
+              <option value="SW526 Mitsubish">SW526 Mitsubish</option>
+            </select>
+          </div>
+        </div>
+        <% } %>
+          <% if (selecionado =="Pós" ) { %>
+            <div class="container">
+              <div class="labels">
+                <label for="">Pós processador</label>
+              </div>
+              <div class="select_container">
+                <select name="selecNamePos" class="form-select" id="PP" aria-label="Default select example">
+                  <option value=""></option>
+                  <option value="Mitsubishi">Mitsubishi</option>
+                  <option value="Heindenhain Veker">Heindenhain Veker</option>
+                  <option value="Siemens Veker">Siemens Veker</option>
+                  <option value="Heindenhain Wotan">Heindenhain Wotan</option>
+                  <option value="Heindenhain Wotan">Heindenhain Eumaq</option>
+                  <option value="Mitsubish Veker">Mitsubish Veker</option>
+                </select>
+              </div>
+            </div>
+            <% } %>
+              <% if (selecionado =="Automação" ) { %>
+                <div class="container">
+                  <div class="labels">
+                    <label for="">Automações</label>
+                  </div>
+                  <div class="select_container">
+                    <select name="selectAutomacao" class="form-select" id="automation"
+                      aria-label="Default select example">
+                      <option value=""></option>
+                      <option value="Rosca">Rosca</option>
+                      <option value="Coluna">Coluna</option>
+                      <option value="Clamps">Clamps</option>
+                      <option value="Face">Face</option>
+                    </select>
+                  </div>
+                </div>
+                <% } %>
+                  <div class="container">
+                    <label for="exampleFormControlInput1" class="form-label">N° Case</label>
+                    <input type="number" name="ordemServico" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Ex: 3240">
+                  </div>
+                  <div>
+                    <div class="container">
+                      <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+                      <textarea name="text_area_select" class="form-control"
+                        placeholder="Escreva a descrição do ajuste ser feito:" id="exampleFormControlTextarea1"
+                        rows="3"></textarea>
+                    </div>
+                  </div>
+                  <br>
+                  <div style="padding:1rem" class="container">
+                    <button class="btn btn-success">
+                      Solicitar
+                    </button>
+                  </div>
+    </form>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+  integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+</html>

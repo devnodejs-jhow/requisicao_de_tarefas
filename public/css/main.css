@@ -1,0 +1,11 @@
+#sel-subject{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6rem;
+}
+#form-home{
+    display: none;
+}
+

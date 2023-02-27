@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Home NCAM</title>
+</head>
+
+<body class="body-pag2">
+    <div class="container_title">
+        <h1 class="container">Ajustes Hi-tech</h1>
+    </div>
+    <div class="container-table">
+        <div class="container-table-int">
+            <table class="table table-success table-striped-columns">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Machine</th>
+                                <th scope="col">Pós porcessador</th>
+                                <th scope="col">Automação</th>
+                                <th scope="col">Ordem de Serviço</th>
+                                <th scope="col">Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (filter = resposta.type) { %>
+                                <p> valid!!!</p>
+                                <%} else { %>
+                                <p> Not Allowed </p>
+                                <% } %>
+                            <tr>
+                                <td scope="col"><%=resposta.machine%></td>
+                                <td scope="col"><%=resposta.pos%></td>
+                                <td scope="col"><%=resposta.automation%></td>
+                                <td scope="col"><%=resposta.Os%></td>
+                                <td scope="col"><%=resposta.descricao%></td>
+                            </tr>
+                        </tbody>
+                </div>
+            </table>
+        </div>
+    </div>
+    <div class="container-btn-return">
+        <a href="/" class="btn btn-primary">
+            Voltar
+        </a>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+</script>
+
+</html>

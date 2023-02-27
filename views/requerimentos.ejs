@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Home NCAM</title>
+</head>
+
+<body class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h1 style="text-align:center" class="container">Ajustes Hi-tech</h1>
+    </div>
+    <div class="container">
+        <div class="container-table-int">
+            <table class="table table-success table-striped-columns">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Machine</th>
+                                <th scope="col">Pós porcessador</th>
+                                <th scope="col">Automação</th>
+                                <th scope="col">Case</th>
+                                <th scope="col">Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%rows.forEach(item=>{%>
+                                <tr>
+                                    <td scope="col"><%=item.machine%></td>
+                                    <td scope="col"><%=item.pos%></td>
+                                    <td scope="col"><%=item.automation%></td>
+                                    <td scope="col"><%=item.Os%></td>
+                                    <td scope="col"><%=item.descricao%></td>
+                                </tr>
+                            <%})%>
+                        </tbody>
+                </div>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <a href="/" class="btn btn-primary">
+            Voltar
+        </a>
+    </div>
+    <br>
+    <form method="POST" class="container" action="/home/requerimentos/filter">
+        <div class="container-buttons">
+            <div class="select_container">
+                <select name="selectFilterOne" class="form-select" id="automation" aria-label="Default select example">
+                    <option value=""></option>
+                    <option value="Machine">Machine</option>
+                    <option value="Pós">Pós processador</option>
+                    <option value="Automação">Automação</option>
+                </select>
+                <br>
+                <div class="container-btn-return">
+                    <button  type="submit" class="btn btn-primary">
+                        Filtrar
+                    </button>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </form>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+</script>
+
+</html>
